@@ -1,0 +1,53 @@
+{
+  LinearLayoutCompat;
+  gravity = "center_horizontal";
+  layout_height = "fill";
+  layout_width = "fill";
+  orientation = "vertical";
+  {
+    LinearLayoutCompat;
+    gravity = "center_horizontal";
+    layout_height = "wrap_content";
+    layout_width = "fill";
+    orientation = "horizontal";
+    {
+      AppCompatButton;
+      layout_gravity = "start";
+      textSize = "20dp";
+      id = "exit";
+      layout_weight = 0;
+      layout_width = "wrap_content";
+      text = "退出";
+      --onClick = "activity.finish()";
+      padding = "8dp";
+      backgroundColor = "#00000000";
+    };
+    {
+      View;
+      layout_weight = 1;
+      layout_width = "0dp";
+      layout_height = "50dp";
+    };
+    {
+      AppCompatButton;
+      layout_weight = 0;
+      text = "更多";
+      id = "more";
+      layout_gravity = "end";
+      textSize = "20dp";
+      layout_width = "wrap_content";
+      padding = "8dp";
+      backgroundColor = "#00000000";
+    };
+  };
+  {
+    EditText;
+    background = "@android:color/transparent";
+    layout_weight = 1;
+    layout_height = "0dp";
+    layout_width = "fill";
+    hint = "可编辑文字";
+    gravity = "top|start";
+    padding = "16dp";
+  };
+};
