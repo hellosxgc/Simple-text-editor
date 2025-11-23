@@ -1,55 +1,63 @@
 {
   LinearLayoutCompat;
-  layout_height = "fill";
-  gravity = "center";
   layout_width = "fill";
   orientation = "vertical";
+  gravity = "center";
+  layout_height = "fill";
   {
     LinearLayoutCompat;
-    layout_height = "wrap_content";
-    gravity = "center_horizontal";
     layout_width = "400dp";
     orientation = "horizontal";
+    gravity = "center_horizontal";
+    layout_height = "wrap_content";
     {
       AppCompatImageButton;
-      id = "exit";
-      backgroundColor = "#00000000";
-      layout_height = "45dp";
       layout_width = "45dp";
+      id = "exit";
+      layout_height = "45dp";
       src = "exit.png";
+      backgroundColor = "#00000000";
+    };
+    {
+      TextView;
+      layout_marginTop = "5dp";
+      layout_width = "wrap_content";
+      Text = "TextEditor";
+      layout_height = "wrap_content";
+      textSize = "25dp";
     };
     {
       View;
-      layout_weight = 1;
+      layout_height = "45dp";
       layout_width = "10dp";
-      layout_height = "45dp";
+      layout_weight = 1;
     };
     {
       AppCompatImageButton;
+      layout_width = "45dp";
       id = "undo";
-      backgroundColor = "#00000000";
       layout_height = "45dp";
-      layout_width = "45dp";
       src = "undo.png";
+      backgroundColor = "#00000000";
     };
     {
       AppCompatImageButton;
-      id = "more";
-      backgroundColor = "#00000000";
-      layout_height = "45dp";
       layout_width = "45dp";
+      id = "more";
+      layout_height = "45dp";
       src = "more.png";
+      backgroundColor = "#00000000";
     };
   };
   {
     EditText;
-    layout_weight = 1;
-    gravity = "top|start";
-    layout_height = "0dp";
-    id = "editText";
     padding = "16dp";
-    hint = "可编辑文字";
+    layout_weight = 1;
     layout_width = "fill";
+    id = "editText";
     background = "@android:color/transparent";
+    layout_height = "0dp";
+    gravity = "top|start";
+    hint = "可编辑文字";
   };
 };
