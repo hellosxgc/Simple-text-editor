@@ -4,22 +4,26 @@ import "android.os.*"
 import "android.widget.*"
 import "android.view.*"
 import "androidx.appcompat.widget.LinearLayoutCompat"
+
 import "androidx.appcompat.widget.LinearLayoutCompat"
-import "androidx.appcompat.widget.AppCompatButton"
-import "android.widget.Toast"
+import "androidx.appcompat.widget.AppCompatImageButton"
+import "android.view.View"
 
 activity
-.setTheme(R.style.Theme_Material3_Green)
-.setTitle("文本编辑器")
+.setTheme(R.style.Theme_Material3_Blue)
+.setTitle("文本编辑器2.0")
 .setContentView(loadlayout("layout"))
 
 activity.getSupportActionBar().hide()
+
+function exit.onClick()
+  activity.finish()
+end
 
 function more.onClick()
   Toast.makeText(activity, "作者还没做", Toast.LENGTH_SHORT).show()
 end
 
-function exit.onClick()
-  activity.finish()
-end  
-  
+function undo.onClick()
+  editText.setText("")
+end

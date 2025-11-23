@@ -1,53 +1,55 @@
 {
   LinearLayoutCompat;
-  gravity = "center_horizontal";
   layout_height = "fill";
+  gravity = "center";
   layout_width = "fill";
   orientation = "vertical";
   {
     LinearLayoutCompat;
-    gravity = "center_horizontal";
     layout_height = "wrap_content";
-    layout_width = "fill";
+    gravity = "center_horizontal";
+    layout_width = "400dp";
     orientation = "horizontal";
     {
-      AppCompatButton;
-      layout_gravity = "start";
-      textSize = "20dp";
+      AppCompatImageButton;
       id = "exit";
-      layout_weight = 0;
-      layout_width = "wrap_content";
-      text = "退出";
-      --onClick = "activity.finish()";
-      padding = "8dp";
       backgroundColor = "#00000000";
+      layout_height = "45dp";
+      layout_width = "45dp";
+      src = "exit.png";
     };
     {
       View;
       layout_weight = 1;
-      layout_width = "0dp";
-      layout_height = "50dp";
+      layout_width = "10dp";
+      layout_height = "45dp";
     };
     {
-      AppCompatButton;
-      layout_weight = 0;
-      text = "更多";
-      id = "more";
-      layout_gravity = "end";
-      textSize = "20dp";
-      layout_width = "wrap_content";
-      padding = "8dp";
+      AppCompatImageButton;
+      id = "undo";
       backgroundColor = "#00000000";
+      layout_height = "45dp";
+      layout_width = "45dp";
+      src = "undo.png";
+    };
+    {
+      AppCompatImageButton;
+      id = "more";
+      backgroundColor = "#00000000";
+      layout_height = "45dp";
+      layout_width = "45dp";
+      src = "more.png";
     };
   };
   {
     EditText;
-    background = "@android:color/transparent";
     layout_weight = 1;
-    layout_height = "0dp";
-    layout_width = "fill";
-    hint = "可编辑文字";
     gravity = "top|start";
+    layout_height = "0dp";
+    id = "editText";
     padding = "16dp";
+    hint = "可编辑文字";
+    layout_width = "fill";
+    background = "@android:color/transparent";
   };
 };
